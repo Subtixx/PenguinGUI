@@ -1,7 +1,7 @@
 function init(virtual)
   if not virtual then
     storage.consoleStorage = storage.consoleStorage or {}
-    entity.setInteractive(true)
+    object.setInteractive(true)
   end
 end
 
@@ -10,7 +10,7 @@ function onConsoleStorageRecieve(consoleStorage)
 end
 
 function onInteraction(args)
-  local interactionConfig = entity.configParameter("interactionConfig")
+  local interactionConfig = config.getParameter("interactionConfig")
   
   local development = true
   if development then

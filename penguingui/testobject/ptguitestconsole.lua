@@ -1,5 +1,5 @@
 function init()
-  storage = console.configParameter("scriptStorage")
+  storage = config.getParameter("scriptStorage")
   local tests = {
     "textTest",
     "windowTest",

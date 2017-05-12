@@ -1408,7 +1408,7 @@ Button.hoverColor = {84, 84, 84} --#545454
 
 
 function Button:_init(x, y, width, height)
-  world.logInfo("Button init with "..x..","..y..","..width..","..height..".")
+  sb.logInfo("Button init with "..x..","..y..","..width..","..height..".")
 
   Component._init(self)
   self.mouseOver = false
@@ -1450,7 +1450,7 @@ function Button:draw(dt)
     startX + rectOffset, startY + rectOffset, startX + w - rectOffset, startY + h - rectOffset
   }
 
-  world.logInfo("drawing now...")
+  --sb.logInfo("drawing now...") -- DEBUG..
   
   PtUtil.drawPoly(borderPoly, self.outerBorderColor, 1)
   if self.mouseOver then
